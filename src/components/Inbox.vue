@@ -13,11 +13,20 @@
       "preview-msg": PreviewMsg
     },
     mounted() {
-//      setInterval(() => {
+      axios.get('http://localhost:3000').then(res => {
+        this.messages = this.messages.concat(res.data);
+      });
+//      const interval = setInterval(() => {
 //        axios.get('http://localhost:3000').then(res => {
 //          this.messages = this.messages.concat(res.data);
+//          console.log(this.messages.length);
+//
+//          if( this.messages.length > 5000 ) {
+//            clearInterval(interval);
+//          }
+//
 //        });
-//      }, 3000)
+//      }, 1000)
     },
     data () {
       return {

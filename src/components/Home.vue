@@ -1,10 +1,10 @@
 <template>
 
   <section class="flex">
-    <div class="flex-one" style="max-height: 100vh; overflow: scroll;">
+    <div class="flex-one inbox">
       <inbox></inbox>
     </div>
-    <div class="flex-two">
+    <div class="flex-two message">
       <message></message>
     </div>
   </section>
@@ -17,19 +17,26 @@
 
   export default {
     components: {
-      "inbox": Inbox,
+      "inbox"  : Inbox,
       "message": Message
-    },
-    data () {
-      return {
-        msg: 'Welcome to Your Vue.js App'
-      }
     }
   }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .message {
+    padding-left: 1em;
+    border-left: 1px solid lightgray;
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+
+  .inbox {
+    max-height: 100vh;
+    max-width: 450px;
+    overflow-y: scroll;
+  }
+
   .flex {
     display: flex;
   }

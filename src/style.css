@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+body, html {
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-one {
+  flex: 1;
+}
+
+.grey {
+  color: grey;
+}
